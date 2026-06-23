@@ -1,0 +1,8 @@
+{
+  "name": "atm",
+  "scripts": {
+    "server": "node server/index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "start cmd /k \"node server/index.js\" && npm run dev --prefix client"
+  }
+}

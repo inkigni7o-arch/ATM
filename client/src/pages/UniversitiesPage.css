@@ -1,0 +1,201 @@
+.uni-form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.uni-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.uni-form h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #1e2464;
+}
+
+.uni-form label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: -4px;
+}
+
+.uni-form input,
+.uni-form select {
+  padding: 10px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.uni-form input:focus,
+.uni-form select:focus {
+  border-color: #1e2464;
+}
+
+.uni-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.uni-form-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: #1e2464 !important;
+  color: #fff !important;
+  border-color: #1e2464 !important;
+}
+
+.uni-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-edit, .btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.btn-edit:hover { background: #eef0ff; }
+.btn-delete:hover { background: #fff0f0; }
+
+.back-btn {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.back-btn:hover { background: rgba(255,255,255,0.25); }
+
+.uni-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.uni-dates label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.uni-image-upload {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.uni-image-upload:hover { border-color: #1e2464; }
+
+.uni-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uni-image-placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.uni-thumb {
+  width: 60px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  font-size: 0;
+  color: transparent;
+}
+
+.uni-no-img {
+  color: #bbb;
+}
+
+.uni-img-cell {
+  width: 72px;
+  min-width: 72px;
+  max-width: 72px;
+  height: 56px;
+  overflow: hidden;
+  padding: 4px !important;
+}
+
+.next-year-btn {
+  margin-left: 10px;
+  background: #f0f4ff;
+  border: 1.5px solid #c0c8f0;
+  color: #1e2464;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.next-year-btn:hover {
+  background: #dce3ff;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-nav-btn {
+  background: #1e2464;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.admin-nav-btn:hover { opacity: 0.85; }

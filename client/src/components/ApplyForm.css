@@ -1,0 +1,93 @@
+.apply-section {
+  background: linear-gradient(135deg, #1a56db 0%, #1343b0 100%);
+  color: #fff;
+}
+
+.apply-inner {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 60px;
+  align-items: start;
+}
+
+.apply-text .section-title { color: #fff; }
+.apply-text p { color: rgba(255,255,255,0.8); margin: 16px 0 24px; font-size: 16px; line-height: 1.7; }
+
+.apply-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.apply-perks li {
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+}
+
+/* Form */
+.apply-form-wrap {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+}
+
+.apply-form { display: flex; flex-direction: column; gap: 16px; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-error { color: #dc2626; font-size: 14px; }
+
+.submit-btn { width: 100%; margin-top: 4px; padding: 16px; font-size: 16px; }
+.submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+/* Success */
+.success-msg {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-icon { font-size: 64px; margin-bottom: 16px; }
+.success-msg h3 { font-size: 24px; margin-bottom: 10px; }
+.success-msg p { color: var(--text-light); margin-bottom: 24px; }
+
+@media (max-width: 1000px) {
+  .apply-inner { grid-template-columns: 1fr; }
+  .apply-form-wrap { max-width: 520px; }
+  .apply-text .section-title { font-size: 28px; }
+}
+
+@media (max-width: 500px) {
+  .form-row { grid-template-columns: 1fr; }
+  .apply-form-wrap { padding: 24px 20px; }
+}

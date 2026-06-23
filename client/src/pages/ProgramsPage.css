@@ -1,0 +1,196 @@
+.prg-page { min-height: 100vh; background: #1e2464; padding: 24px; }
+
+.prg-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 24px;
+}
+.prg-header h2 { color: #fff; font-size: 22px; font-weight: 700; }
+
+.prg-tabs {
+  display: flex; gap: 8px; margin-bottom: 20px;
+}
+.prg-tab {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.6);
+  border-radius: 8px; padding: 8px 20px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: all 0.2s; font-family: inherit;
+}
+.prg-tab.active { background: #fff; color: #1e2464; border-color: #fff; }
+.prg-tab:hover:not(.active) { color: #fff; }
+
+.prg-tag-section { max-width: 600px; }
+.prg-tag-add { display: flex; gap: 8px; margin-bottom: 14px; }
+.prg-tag-add input {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 8px; color: #fff;
+  padding: 9px 14px; font-size: 14px; outline: none;
+  font-family: inherit; flex: 1;
+}
+.prg-tag-add input::placeholder { color: rgba(255,255,255,0.4); }
+.prg-tag-add button {
+  background: #fff; color: #1e2464;
+  border: none; border-radius: 8px;
+  width: 40px; font-size: 20px; font-weight: 700; cursor: pointer;
+}
+.prg-tag-add button:disabled { opacity: 0.4; cursor: not-allowed; }
+.prg-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.prg-tag {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px; padding: 6px 14px;
+  color: #fff; font-size: 14px;
+}
+.prg-tag button {
+  background: none; border: none; color: rgba(255,255,255,0.5);
+  font-size: 16px; cursor: pointer; padding: 0; line-height: 1;
+}
+.prg-tag button:hover { color: #ff8a80; }
+
+.prg-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  height: calc(100vh - 180px);
+}
+
+.prg-uni-list {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.prg-uni-search { padding: 10px 10px 6px; }
+.prg-uni-search input {
+  width: 100%; box-sizing: border-box;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px; color: #fff;
+  padding: 8px 12px; font-size: 13px; outline: none; font-family: inherit;
+}
+.prg-uni-search input::placeholder { color: rgba(255,255,255,0.35); }
+.prg-uni-search input:focus { border-color: rgba(255,255,255,0.4); }
+
+.prg-uni-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.15s;
+}
+.prg-uni-item:hover { background: rgba(255,255,255,0.08); }
+.prg-uni-item.active { background: rgba(255,255,255,0.18); }
+.prg-uni-item-name { display: block; color: #fff; font-weight: 600; font-size: 14px; }
+.prg-uni-item-sub { display: block; color: rgba(255,255,255,0.5); font-size: 12px; margin-top: 2px; }
+
+.prg-edit-panel {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.prg-empty { color: rgba(255,255,255,0.4); font-size: 15px; text-align: center; margin-top: 40px; }
+
+.prg-edit-title { color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+
+.prg-edit-section { margin-bottom: 20px; }
+.prg-edit-section > label:not(.prg-toggle) {
+  display: block; color: rgba(255,255,255,0.6);
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; margin-bottom: 8px;
+}
+
+.prg-section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 8px;
+}
+.prg-section-header > label:first-child {
+  margin-bottom: 0 !important;
+}
+
+.prg-toggle {
+  display: flex; align-items: center; gap: 8px; cursor: pointer;
+}
+.prg-toggle input { display: none; }
+.prg-toggle-track {
+  width: 40px; height: 22px; border-radius: 11px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.25);
+  position: relative; transition: background 0.2s;
+  flex-shrink: 0;
+}
+.prg-toggle input:checked ~ .prg-toggle-track { background: #4f8ef7; border-color: #4f8ef7; }
+.prg-toggle-thumb {
+  position: absolute; top: 2px; left: 2px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #fff; transition: left 0.2s;
+}
+.prg-toggle input:checked ~ .prg-toggle-track .prg-toggle-thumb { left: 20px; }
+.prg-toggle-label { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 500; }
+.prg-edit-section textarea {
+  width: 100%; background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px; color: #fff;
+  padding: 10px 14px; font-size: 14px;
+  font-family: inherit; outline: none; resize: vertical;
+  box-sizing: border-box;
+}
+.prg-edit-section textarea::placeholder { color: rgba(255,255,255,0.35); }
+.prg-edit-section textarea:focus { border-color: rgba(255,255,255,0.4); }
+
+.prg-text-input {
+  width: 100%; box-sizing: border-box;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px; color: #fff;
+  padding: 8px 12px; font-size: 14px; outline: none; font-family: inherit;
+}
+.prg-text-input::placeholder { color: rgba(255,255,255,0.35); }
+.prg-text-input:focus { border-color: rgba(255,255,255,0.4); }
+
+.prg-req-add { display: flex; gap: 8px; margin-bottom: 10px; }
+.prg-req-add input {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px; color: #fff;
+  padding: 8px 12px; font-size: 14px; outline: none;
+  font-family: inherit; flex: 1;
+}
+.prg-req-add input::placeholder { color: rgba(255,255,255,0.35); }
+.prg-req-add button {
+  background: #fff; color: #1e2464;
+  border: none; border-radius: 8px;
+  width: 36px; font-size: 20px; font-weight: 700; cursor: pointer;
+}
+.prg-req-add button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.prg-checkboxes { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.prg-checkbox-item {
+  display: flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; padding: 7px 14px;
+  color: #fff; font-size: 14px; cursor: pointer;
+  transition: background 0.15s; user-select: none;
+}
+.prg-checkbox-item:hover { background: rgba(255,255,255,0.14); }
+.prg-checkbox-item input { accent-color: #fff; cursor: pointer; margin: 0; }
+.prg-checkbox-del {
+  background: none; border: none; color: rgba(255,255,255,0.35);
+  font-size: 16px; cursor: pointer; padding: 0; line-height: 1;
+  margin-left: 4px;
+}
+.prg-checkbox-del:hover { color: #ff8a80; }
+
+.prg-save-btn {
+  background: #fff; color: #1e2464;
+  border: none; border-radius: 8px;
+  padding: 10px 28px; font-weight: 700; font-size: 14px;
+  cursor: pointer; margin-top: 4px;
+}
+.prg-save-btn:disabled { opacity: 0.5; cursor: not-allowed; }

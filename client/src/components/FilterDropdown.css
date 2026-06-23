@@ -1,0 +1,134 @@
+.fdd {
+  position: relative;
+}
+
+.fdd-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 18px;
+  height: 48px;
+  min-width: 180px;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.fdd-trigger.has-value {
+  color: #1e2464;
+  border-color: #1e2464;
+  font-weight: 600;
+}
+
+.fdd-trigger:hover,
+.fdd-trigger.open {
+  border-color: #1e2464;
+  box-shadow: 0 0 0 3px rgba(30,36,100,0.08);
+}
+
+.fdd-display {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.fdd-images {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.fdd-thumb {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.fdd-item-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.fdd-trigger svg {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  color: #9ca3af;
+}
+
+.fdd-trigger.open svg {
+  transform: rotate(180deg);
+}
+
+.fdd-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 100%;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 50;
+  overflow: hidden;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.fdd-search-wrap {
+  padding: 8px 10px 4px;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.fdd-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 7px;
+  font-size: 13px;
+  outline: none;
+  color: #1e2464;
+  background: #f7f8ff;
+}
+
+.fdd-search:focus {
+  border-color: #1e2464;
+}
+
+.fdd-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  transition: background 0.15s;
+}
+
+.fdd-item:hover { background: #f3f4f6; }
+
+.fdd-item.checked { background: #eff6ff; color: #1e2464; font-weight: 500; }
+
+.fdd-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #1e2464;
+  cursor: pointer;
+  flex-shrink: 0;
+}
