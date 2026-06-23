@@ -37,12 +37,7 @@ function notifyAdmins(text) {
 const app = express();
 
 const isProd = process.env.NODE_ENV === 'production';
-app.use(cors({
-  origin: isProd
-    ? ['https://atm.uz', 'https://www.atm.uz', 'http://localhost:5173']
-    : true,
-  credentials: true,
-}));
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
