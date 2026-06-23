@@ -200,9 +200,7 @@
 }
 
 .payment-modal {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(20, 26, 80, 0.95);
   border-radius: 16px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
   padding: 44px 52px 40px;
