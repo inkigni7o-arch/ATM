@@ -470,7 +470,7 @@ if (isProd && fs.existsSync(distDir)) {
 const distPath = path.join(__dirname, '../client/dist');
 if (fs.existsSync(distPath)) {
   app.use(express.static(distPath));
-  app.get('*', (req, res) => res.sendFile(path.join(distPath, 'index.html')));
+  app.get('/{*splat}', (req, res) => res.sendFile(path.join(distPath, 'index.html')));
 }
 
 const PORT = process.env.PORT || 3001;
