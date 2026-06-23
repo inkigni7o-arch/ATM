@@ -46,11 +46,6 @@ app.use(cors({
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Serve built React frontend in production
-const distDir = path.join(__dirname, '../client/dist');
-if (isProd && fs.existsSync(distDir)) {
-  app.use(express.static(distDir));
-}
 
 // SQLite setup
 const db = new Database(path.join(__dirname, 'applications.db'));
@@ -461,10 +456,6 @@ app.post('/api/ai', async (req, res) => {
   }
 });
 
-// SPA fallback — must be after all API routes
-if (isProd && fs.existsSync(distDir)) {
-  app.get('*', (req, res) => res.sendFile(path.join(distDir, 'index.html')));
-}
 
 // Serve built frontend
 const distPath = path.join(__dirname, '../client/dist');
